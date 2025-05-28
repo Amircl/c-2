@@ -10,9 +10,9 @@ int main() {
     printf("\n----+---------------------------\n");
 
     for (i = 1; i <= 9; i++) {
-        printf("%3d |", i); // Левая колонка
+        printf("%3d |", i); 
         for (j = 1; j <= 9; j++) {
-            printf("%3d", i * j); // Ячейки таблицы
+            printf("%3d", i * j); 
         }
         printf("\n");
     }
