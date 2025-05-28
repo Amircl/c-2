@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int X, i, j, k;
+
+    printf("Введите количество уровней ёлки: ");
+    scanf("%d", &X);
+
+    // Рисуем уровни ёлки
+    for (i = 1; i <= X; i++) {
+        // Пробелы перед звёздами
+        for (j = 1; j <= X - i; j++) {
+            printf(" ");
+        }
+        // Звёзды
+        for (k = 1; k <= 2 * i - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    // Рисуем ствол
+    for (i = 1; i <= X - 1; i++) {
+        printf(" ");
+    }
+    printf("|\n");
+
+    return 0;
+}
