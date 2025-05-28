@@ -11,8 +11,6 @@ int main() {
         scanf("%d", ¤t_height);
 
         if (current_height == 0) break; // Выход при вводе 0
-
-        // Обновляем максимальный рост
         if (current_height > max_height) {
             prev_max = max_height;
             max_height = current_height;
@@ -22,7 +20,6 @@ int main() {
 
         student_count++;
 
-        // Вывод текущего списка (без массивов)
         printf("Текущий порядок: ");
         if (student_count == 1) {
             printf("%d", max_height);
