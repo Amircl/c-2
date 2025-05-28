@@ -14,14 +14,9 @@ int main() {
 
     base_fare = 100 + (demand_level * 2);
 
-    // Стоимость за километр и минуту
     distance_fare = distance_km * 10;
     time_fare = duration_min * 2;
-
-    // Комиссия сервиса (29-69 руб)
     service_fee = 29 + (demand_level * 0.4);
-
-    // Итоговая стоимость
     total_fare = base_fare + distance_fare + time_fare + service_fee;
 
     printf("\n--- Чек ---\n");
