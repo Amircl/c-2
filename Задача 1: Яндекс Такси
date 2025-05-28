@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int demand_level;
+    float distance_km, duration_min;
+    float base_fare = 0, distance_fare = 0, time_fare = 0, service_fee = 0, total_fare = 0;
+
+    printf("Введите уровень спроса (1-100): ");
+    scanf("%d", &demand_level);
+    printf("Введите длину маршрута (км): ");
+    scanf("%f", &distance_km);
+    printf("Введите длительность маршрута (мин): ");
+    scanf("%f", &duration_min);
+
+    base_fare = 100 + (demand_level * 2);
+
+    // Стоимость за километр и минуту
+    distance_fare = distance_km * 10;
+    time_fare = duration_min * 2;
+
+    // Комиссия сервиса (29-69 руб)
+    service_fee = 29 + (demand_level * 0.4);
+
+    // Итоговая стоимость
+    total_fare = base_fare + distance_fare + time_fare + service_fee;
+
+    printf("\n--- Чек ---\n");
+    printf("Подача: %.2f руб\n", base_fare);
+    printf("За расстояние: %.2f руб\n", distance_fare);
+    printf("За время: %.2f руб\n", time_fare);
+    printf("Комиссия сервиса: %.2f руб\n", service_fee);
+    printf("Итого: %.2f руб\n", total_fare);
+
+    return 0;
+}
