@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int student_count = 0;
+    int current_height, max_height = 0, prev_max = 0;
+
+    printf("Вводите рост учеников (0 для завершения):\n");
+
+    while (1) {
+        printf("Рост ученика %d: ", student_count + 1);
+        scanf("%d", ¤t_height);
+
+        if (current_height == 0) break; // Выход при вводе 0
+
+        // Обновляем максимальный рост
+        if (current_height > max_height) {
+            prev_max = max_height;
+            max_height = current_height;
+        } else if (current_height > prev_max) {
+            prev_max = current_height;
+        }
+
+        student_count++;
+
+        // Вывод текущего списка (без массивов)
+        printf("Текущий порядок: ");
+        if (student_count == 1) {
+            printf("%d", max_height);
+        } else {
+            printf("%d, %d", max_height, prev_max);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
